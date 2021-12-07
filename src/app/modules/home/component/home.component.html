@@ -1,0 +1,37 @@
+
+
+<div class="app-container">
+    <p-toolbar color="primary" class="app-toolbar">
+
+        <p-button style="float: right; margin-top: -50px; margin-right: 10px; color: darkgoldenrod;" type="button"
+        (click)="snav = true" icon="pi pi-bars">
+      </p-button>
+        <h1 class="app-title">CIT Compliance</h1>
+        <span class="spacer"></span>
+        <p-button icon="pi pi-sign-out" pButton (click)="logout()"></p-button>
+    </p-toolbar>
+
+    <p-sidebar class="app-sidenav-container" [(visible)]="snav">
+     
+            
+                <div *ngFor="let menu of menus" (click)="onMenuClick(menu)">
+                    <p-button (click)="snav = false"  mat-icon-button>
+                        <mat-icon>{{ menu.icon }}</mat-icon>
+                 &nbsp;
+                    <a>{{ menu.title }}</a>
+                </p-button>
+                <br><br>
+                </div>
+            
+        
+
+
+
+    </p-sidebar>
+    <div class="router-outlet-container">
+        <router-outlet></router-outlet>
+    </div>
+    
+
+</div>
+ 
