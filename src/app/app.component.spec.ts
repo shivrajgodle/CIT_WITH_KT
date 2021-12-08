@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ms-shopping-portal-ui'`, () => {
+  it(`should have as title 'KetanCIT'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ms-shopping-portal-ui');
+    expect(app.title).toEqual('KetanCIT');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ms-shopping-portal-ui app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('KetanCIT app is running!');
   });
 });

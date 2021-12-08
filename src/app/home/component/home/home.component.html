@@ -1,0 +1,33 @@
+<div class="app-container">
+    <div class="navv">
+        <p-toolbar styleClass="app-toolbar">
+
+            <div class="p-toolbar-group-left" class="p-toolbar-group-left">
+                <button pButton class="p-button-warning" (click)="snav = true" style="color: black; border: 1px solid black;" icon="pi pi-bars">
+            </button> &nbsp;
+                <img src="assets/images/pwc.png">
+
+            </div>
+
+            <h1>CIT Compliance</h1>
+            <!-- <span class="spacer"></span> -->
+            <button pButton class="p-button-danger" style="border: 1px solid black; color: black;" label="Logout" (click)="logout()"></button>
+
+        </p-toolbar>
+    </div>
+    <hr>
+    <p-sidebar styleClass="sidebar" class="app-sidenav-container" [(visible)]="snav">
+        <hr>
+        <div *ngFor="let menu of menus" (click)="onMenuClick(menu)">
+            <h3 style="font-weight:normal">
+                <i class="{{ menu.icon }}" style="font-size: 20px;"></i> &nbsp;
+                <a style="text-decoration: none; cursor: pointer;" (click)="snav = false">{{ menu.title }}</a>
+            </h3>
+            <hr>
+        </div>
+    </p-sidebar>
+
+    <div class="router-outlet-container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

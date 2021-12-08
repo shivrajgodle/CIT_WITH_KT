@@ -1,29 +1,23 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { MaterialComponentModule } from 'src/material.modules';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './modules/user/component/login.component';
-import { CookieService } from 'ngx-cookie-service';
+import { SharedModule } from './shared/shared_module.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialComponentModule,
-    AppRoutingModule
+    HttpClientModule
   ],
-  providers: [CookieService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
