@@ -18,11 +18,16 @@ import {CardModule} from 'primeng/card';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {PanelMenuModule} from 'primeng/panelmenu';
 import {MenuItem} from 'primeng/api';
+import {DividerModule} from 'primeng/divider';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+
+
 
 @NgModule({
   declarations: [],
   imports: [
-
+    DividerModule,
     InputTextModule,
     ToggleButtonModule,
     DropdownModule,
@@ -42,6 +47,8 @@ import {MenuItem} from 'primeng/api';
     ProgressSpinnerModule,
     TableModule,
     FlexLayoutModule,
+    MessageModule,
+    MessagesModule
   ],
   exports:[
     ToolbarModule,
@@ -62,6 +69,9 @@ import {MenuItem} from 'primeng/api';
     DropdownModule,
     CardModule,
     PanelMenuModule,
+    DividerModule,
+    MessageModule,
+    MessagesModule
   ]
 })
 export class SharedModule { }

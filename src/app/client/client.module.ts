@@ -14,7 +14,13 @@ import { SharedModule } from '../shared/shared_module.module';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forChild([{ path: '', component: ClientComponent }]),
+    RouterModule.forChild(
+      [
+        {
+          path:'',
+          component:ClientComponent
+        }
+      ]),
 
   ]
 })

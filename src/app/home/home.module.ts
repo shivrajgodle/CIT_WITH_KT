@@ -6,6 +6,7 @@ import { TeamModule } from '../team/team.module';
 import { ProjectModule } from '../project/project.module';
 import { HomeComponent } from './component/home/home.component';
 import { SharedModule } from '../shared/shared_module.module';
+import { HomepageModule } from '../homepage/homepage.module';
 
 
 
@@ -21,8 +22,12 @@ import { SharedModule } from '../shared/shared_module.module';
     RouterModule.forChild([
       {
           path: '', component: HomeComponent, children: [
+            //   {
+            //       path:"home1",
+            //       loadChildren:() =>HomepageModule
+            //   },
               {
-                  path: "client/myClient",
+                  path: "client",
                   loadChildren: () => ClientModule,
               },
               {

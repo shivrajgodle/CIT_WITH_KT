@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private router:Router) {
     this.menus = [];
-    this.menus.push(new Menu("Client-Master","pi pi-users","home/client/myClient"));
+    this.menus.push(new Menu("Client-Master","pi pi-users","home/client"));
     this.menus.push(new Menu("User Management","pi pi-users","home/team"));
     this.menus.push(new Menu("My Workspace","pi pi-briefcase","home/project" ));
    }
